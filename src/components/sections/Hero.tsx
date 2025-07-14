@@ -236,53 +236,38 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
           {/* Right Column - Dynamic Stats & Visual */}
           <div className="relative">
             {/* Floating Stats Cards */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-gray-700/50 hover:shadow-teal-500/20 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-500/30">
-                    <Clock className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-3xl font-black text-white group-hover:text-teal-400 transition-colors duration-300">24</div>
-                    <div className="text-gray-400 text-sm font-medium">{t.stats.delivery}</div>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10 w-full max-w-2xl mx-auto lg:mx-0">
+              {/* Card 1 */}
+              <div className="flex flex-col items-center justify-center bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border border-gray-700/50 hover:shadow-teal-500/20 transition-all duration-500 group min-h-[180px] min-w-[220px]">
+                <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r from-teal-500 to-blue-500 shadow-lg shadow-teal-500/30">
+                  <Clock className="w-8 h-8 text-white" />
                 </div>
+                <div className="text-4xl font-black text-white mb-1">24</div>
+                <div className="text-gray-400 text-base font-medium">{t.stats.delivery}</div>
               </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-gray-700/50 hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/30">
-                    <Code className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-3xl font-black text-white group-hover:text-blue-400 transition-colors duration-300">15+</div>
-                    <div className="text-gray-400 text-sm font-medium">{t.stats.projects}</div>
-                  </div>
+              {/* Card 2 */}
+              <div className="flex flex-col items-center justify-center bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border border-gray-700/50 hover:shadow-yellow-500/20 transition-all duration-500 group min-h-[180px] min-w-[220px]">
+                <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 shadow-lg shadow-yellow-500/30">
+                  <Star className="w-8 h-8 text-white" />
                 </div>
+                <div className="text-2xl font-black text-white mb-1 text-center">Best Quality Work</div>
+                <div className="text-gray-400 text-base font-medium">Guaranteed</div>
               </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-gray-700/50 hover:shadow-green-500/20 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/30">
-                    <CheckCircle className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-3xl font-black text-white group-hover:text-green-400 transition-colors duration-300">100%</div>
-                    <div className="text-gray-400 text-sm font-medium">{t.stats.satisfaction}</div>
-                  </div>
+              {/* Card 3 */}
+              <div className="flex flex-col items-center justify-center bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border border-gray-700/50 hover:shadow-green-500/20 transition-all duration-500 group min-h-[180px] min-w-[220px]">
+                <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r from-green-500 to-teal-500 shadow-lg shadow-green-500/30">
+                  <CheckCircle className="w-8 h-8 text-white" />
                 </div>
+                <div className="text-4xl font-black text-white mb-1">100%</div>
+                <div className="text-gray-400 text-base font-medium">{t.stats.satisfaction}</div>
               </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-gray-700/50 hover:shadow-purple-500/20 hover:-translate-y-2 transition-all duration-500 group">
-                <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/30">
-                    <Zap className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-3xl font-black text-white group-hover:text-purple-400 transition-colors duration-300">5x</div>
-                    <div className="text-gray-400 text-sm font-medium">{t.stats.speed}</div>
-                  </div>
+              {/* Card 4 */}
+              <div className="flex flex-col items-center justify-center bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border border-gray-700/50 hover:shadow-purple-500/20 transition-all duration-500 group min-h-[180px] min-w-[220px]">
+                <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/30">
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
+                <div className="text-4xl font-black text-white mb-1">5x</div>
+                <div className="text-gray-400 text-base font-medium">{t.stats.speed}</div>
               </div>
             </div>
 

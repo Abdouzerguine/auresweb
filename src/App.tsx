@@ -9,6 +9,7 @@ import About from './components/sections/About';
 import Contact from './components/sections/Contact';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
+import ThreeBackground from "./components/ThreeBackground";
 
 function AppContent() {
   const [currentLang, setCurrentLang] = React.useState('en');

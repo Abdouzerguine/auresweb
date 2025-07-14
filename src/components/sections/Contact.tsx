@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, Zap, Rocket } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, Zap, Rocket, Facebook, Instagram, Youtube } from 'lucide-react';
 
 interface ContactProps {
   currentLang: string;
@@ -59,7 +59,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
       },
       info: {
         email: 'contact@auresweb.dz',
-        phone: '+213 XXX XXX XXX',
+        phone: '+213(0)781604556',
         location: 'الجزائر العاصمة، الجزائر',
         hours: 'الأحد - الخميس: 9:00 - 20:00'
       },
@@ -140,7 +140,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
       },
       info: {
         email: 'contact@auresweb.dz',
-        phone: '+213 XXX XXX XXX',
+        phone: '+213(0)781604556',
         location: 'Algiers, Algeria',
         hours: 'Sunday - Thursday: 9:00 AM - 8:00 PM'
       },
@@ -221,7 +221,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
       },
       info: {
         email: 'contact@auresweb.dz',
-        phone: '+213 XXX XXX XXX',
+        phone: '+213(0)781604556',
         location: 'Alger, Algérie',
         hours: 'Dimanche - Jeudi: 9h00 - 20h00'
       },
@@ -504,6 +504,49 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
                   </div>
                 </div>
               </div>
+
+              {/* Social Media Links */}
+              <div className="mt-8 pt-6 border-t border-gray-700/50">
+                <h4 className="font-bold text-white text-sm mb-4">
+                  {currentLang === 'ar' ? 'تابعني على' : currentLang === 'fr' ? 'Suivez-moi sur' : 'Follow me on'}
+                </h4>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://facebook.com/auresweb05"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50"
+                  >
+                    <Facebook className="w-6 h-6 text-white" />
+                  </a>
+                  <a
+                    href="https://instagram.com/auresweb05"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50"
+                  >
+                    <Instagram className="w-6 h-6 text-white" />
+                  </a>
+                  <a
+                    href="https://youtube.com/@auresweb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-600/30 hover:shadow-red-600/50"
+                  >
+                    <Youtube className="w-6 h-6 text-white" />
+                  </a>
+                  <a
+                    href="https://tiktok.com/@auresweb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-r from-black to-gray-800 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg shadow-black/30 hover:shadow-black/50"
+                  >
+                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Work Process */}
@@ -588,6 +631,49 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
                   </div>
                   <span className="text-sm font-medium">{currentLang === 'ar' ? 'واتساب' : currentLang === 'fr' ? 'WhatsApp' : 'WhatsApp'}</span>
                 </a>
+                
+                {/* Social Media Quick Links */}
+                <div className="pt-4 border-t border-gray-700/30">
+                  <p className="text-xs text-gray-400 mb-3">
+                    {currentLang === 'ar' ? 'تابعني على' : currentLang === 'fr' ? 'Suivez-moi sur' : 'Follow me on'}
+                  </p>
+                  <div className="flex space-x-2">
+                    <a
+                      href="https://facebook.com/auresweb05"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-blue-600/20 rounded-full flex items-center justify-center hover:bg-blue-600/30 transition-colors border border-blue-600/30"
+                    >
+                      <Facebook className="w-4 h-4 text-blue-400" />
+                    </a>
+                    <a
+                      href="https://instagram.com/auresweb05"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-pink-500/20 rounded-full flex items-center justify-center hover:bg-pink-500/30 transition-colors border border-pink-500/30"
+                    >
+                      <Instagram className="w-4 h-4 text-pink-400" />
+                    </a>
+                    <a
+                      href="https://youtube.com/@auresweb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/30 transition-colors border border-red-600/30"
+                    >
+                      <Youtube className="w-4 h-4 text-red-400" />
+                    </a>
+                    <a
+                      href="https://tiktok.com/@auresweb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-black/20 rounded-full flex items-center justify-center hover:bg-black/30 transition-colors border border-black/30"
+                    >
+                      <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

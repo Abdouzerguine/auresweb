@@ -491,12 +491,13 @@ const Services: React.FC<ServicesProps> = ({ currentLang }) => {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <section className="py-24 bg-gray-900/60 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+    <section className="relative min-h-screen py-24 bg-gray-900/60 overflow-hidden">
+      {/* 3D Background removed */}
+      {/* Background Elements (old) */}
+      {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-teal-400 rounded-full animate-pulse shadow-lg shadow-teal-500/30" />
         <div className="absolute bottom-20 right-20 w-24 h-24 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-500/30" style={{ animationDelay: '1s' }} />
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

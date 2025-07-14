@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, Zap, Globe, Target, Rocket } from 'lucide-react';
+import { Heart, Zap, Globe, Target, Rocket, Star, Clock, Wrench, Sparkles } from 'lucide-react';
+import ThreeBackground from '../ThreeBackground';
 
 interface AboutProps {
   currentLang: string;
@@ -74,7 +75,7 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
       subtitle: 'Passionate web developer bridging Algerian identity with global innovation',
       story: {
         title: 'My Journey',
-        content: 'I started my programming journey 3 years ago with a simple dream: helping Algerian businesses build a strong digital presence. Today, I deliver professional websites in record time, combining global quality with deep understanding of the local market.'
+        content: 'I\'m a passionate web developer who loves turning ideas into beautiful, functional websites. I focus on creating modern, responsive designs that not only look great but also deliver results. Every project I work on gets my full attention and dedication to ensure the highest quality.'
       },
       mission: {
         title: 'My Mission',
@@ -124,11 +125,11 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
         tools: 'Tools & Technologies'
       },
       experience: {
-        title: 'My Achievements',
-        years: '3+ Years Experience',
-        projects: '15+ Completed Projects',
-        clients: '12+ Happy Clients',
-        speed: '24 Hours Average Delivery'
+        title: 'Why Choose Me',
+        quality: 'Premium Quality',
+        speed: 'Fast Delivery',
+        support: 'Ongoing Support',
+        innovation: 'Modern Solutions'
       }
     },
     fr: {
@@ -136,7 +137,7 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
       subtitle: 'Développeur web passionné alliant identité algérienne et innovation mondiale',
       story: {
         title: 'Mon Parcours',
-        content: 'J\'ai commencé mon parcours en programmation il y a 3 ans avec un rêve simple : aider les entreprises algériennes à construire une présence numérique forte. Aujourd\'hui, je livre des sites web professionnels en temps record, combinant qualité mondiale et compréhension profonde du marché local.'
+        content: 'Je suis un développeur web passionné qui aime transformer les idées en sites web beaux et fonctionnels. Je me concentre sur la création de designs modernes et responsifs qui non seulement sont esthétiques mais aussi produisent des résultats. Chaque projet sur lequel je travaille reçoit toute mon attention et mon dévouement pour garantir la plus haute qualité.'
       },
       mission: {
         title: 'Ma Mission',
@@ -186,11 +187,11 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
         tools: 'Outils & Technologies'
       },
       experience: {
-        title: 'Mes Réalisations',
-        years: '3+ Années d\'Expérience',
-        projects: '15+ Projets Terminés',
-        clients: '12+ Clients Satisfaits',
-        speed: '24 Heures Livraison Moyenne'
+        title: 'Pourquoi Me Choisir',
+        quality: 'Qualité Premium',
+        speed: 'Livraison Rapide',
+        support: 'Support Continu',
+        innovation: 'Solutions Modernes'
       }
     }
   };
@@ -204,13 +205,14 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
   };
 
   return (
-    <section className="py-24 bg-gray-900/60 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+    <section className="relative min-h-screen py-24 bg-gray-900/60 overflow-hidden">
+      {/* 3D Background removed */}
+      {/* Background Elements (old) */}
+      {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-teal-400 rounded-full animate-pulse shadow-lg shadow-teal-500/30" />
         <div className="absolute bottom-20 right-20 w-32 h-32 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-500/30" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-purple-400 rounded-full animate-pulse shadow-lg shadow-purple-500/30" style={{ animationDelay: '2s' }} />
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -378,23 +380,31 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
             
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-teal-500/30">
-                <div className="text-3xl font-black text-teal-400 mb-2">3+</div>
-                <div className="text-gray-300 text-sm font-medium">{t.experience.years}</div>
+                <div className="flex justify-center mb-2">
+                  <Star className="w-8 h-8 text-teal-400" />
+                </div>
+                <div className="text-gray-300 text-sm font-medium">{t.experience.quality}</div>
               </div>
               
               <div className="text-center bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-blue-500/30">
-                <div className="text-3xl font-black text-blue-400 mb-2">15+</div>
-                <div className="text-gray-300 text-sm font-medium">{t.experience.projects}</div>
+                <div className="flex justify-center mb-2">
+                  <Clock className="w-8 h-8 text-blue-400" />
+                </div>
+                <div className="text-gray-300 text-sm font-medium">{t.experience.speed}</div>
               </div>
               
               <div className="text-center bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-green-500/30">
-                <div className="text-3xl font-black text-green-400 mb-2">12+</div>
-                <div className="text-gray-300 text-sm font-medium">{t.experience.clients}</div>
+                <div className="flex justify-center mb-2">
+                  <Wrench className="w-8 h-8 text-green-400" />
+                </div>
+                <div className="text-gray-300 text-sm font-medium">{t.experience.support}</div>
               </div>
 
               <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-purple-500/30">
-                <div className="text-3xl font-black text-purple-400 mb-2">24</div>
-                <div className="text-gray-300 text-sm font-medium">{t.experience.speed}</div>
+                <div className="flex justify-center mb-2">
+                  <Sparkles className="w-8 h-8 text-purple-400" />
+                </div>
+                <div className="text-gray-300 text-sm font-medium">{t.experience.innovation}</div>
               </div>
             </div>
 

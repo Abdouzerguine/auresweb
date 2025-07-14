@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Heart } from 'lucide-react';
+import { Heart, Facebook, Instagram, Youtube } from 'lucide-react';
 
 interface FooterProps {
   currentLang: string;
@@ -77,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ currentLang }) => {
             ))}
           </nav>
 
-          {/* Contact Info */}
+          {/* Contact Info & Social Media */}
           <div className="space-y-4">
             <a
               href="mailto:contact@auresweb.dz"
@@ -86,18 +86,61 @@ const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               contact@auresweb.dz
             </a>
             <a
-              href="tel:+213XXXXXXXXX"
+              href="tel:+2130781604556"
               className="block text-gray-300 hover:text-teal-400 transition-colors"
             >
-              +213 XXX XXX XXX
+              +213(0)781604556
             </a>
+            
+            {/* Social Media Links */}
+            <div className="pt-4">
+              <p className="text-sm text-gray-400 mb-3">
+                {currentLang === 'ar' ? 'تابعني على' : currentLang === 'fr' ? 'Suivez-moi sur' : 'Follow me on'}
+              </p>
+              <div className="flex space-x-3">
+                <a
+                  href="https://facebook.com/auresweb05"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center hover:bg-blue-600/30 transition-colors border border-blue-600/30 hover:scale-110"
+                >
+                  <Facebook className="w-5 h-5 text-blue-400" />
+                </a>
+                <a
+                  href="https://instagram.com/auresweb05"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-pink-500/20 rounded-full flex items-center justify-center hover:bg-pink-500/30 transition-colors border border-pink-500/30 hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5 text-pink-400" />
+                </a>
+                <a
+                  href="https://youtube.com/@auresweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/30 transition-colors border border-red-600/30 hover:scale-110"
+                >
+                  <Youtube className="w-5 h-5 text-red-400" />
+                </a>
+                <a
+                  href="https://tiktok.com/@auresweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:bg-black/30 transition-colors border border-black/30 hover:scale-110"
+                >
+                  <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-800/50 text-center">
           <p className="text-gray-400">
-            © 2024 AuresWeb. {t.rights}.
+            © 2025 AuresWeb. {t.rights}.
           </p>
           <p className="text-gray-500 text-sm mt-2 flex items-center justify-center">
             {t.madeWith} <Heart className="w-4 h-4 text-red-500 mx-1" /> by AuresWeb
