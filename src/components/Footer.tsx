@@ -83,11 +83,8 @@ const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               <MessageCircle className="w-6 h-6 mr-2" />
               WhatsApp: +213 781 60 45 56
             </a>
-            <a
-              href="mailto:contact@auresweb.dz"
-              className="block text-gray-300 hover:text-teal-400 transition-colors text-lg font-medium"
-            >
-              contact@auresweb.dz
+            <a href="mailto:auresweb05@gmail.com" className="block text-gray-300 hover:text-teal-400 transition-colors text-lg font-medium">
+              auresweb05@gmail.com
             </a>
             
             {/* Social Media Links */}
