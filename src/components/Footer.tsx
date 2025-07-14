@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Heart, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Heart, Facebook, Instagram, Youtube, MessageCircle } from 'lucide-react';
 
 interface FooterProps {
   currentLang: string;
@@ -80,19 +80,14 @@ const Footer: React.FC<FooterProps> = ({ currentLang }) => {
           {/* Contact Info & Social Media */}
           <div className="space-y-4">
             <a href="https://wa.me/213781604556" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-teal-400 hover:text-green-500 font-bold text-lg">
+              <MessageCircle className="w-6 h-6 mr-2" />
               WhatsApp: +213 781 60 45 56
             </a>
             <a
               href="mailto:contact@auresweb.dz"
-              className="block text-gray-300 hover:text-teal-400 transition-colors"
+              className="block text-gray-300 hover:text-teal-400 transition-colors text-lg font-medium"
             >
               contact@auresweb.dz
-            </a>
-            <a
-              href="tel:+2130781604556"
-              className="block text-gray-300 hover:text-teal-400 transition-colors"
-            >
-              +213(0)781604556
             </a>
             
             {/* Social Media Links */}
