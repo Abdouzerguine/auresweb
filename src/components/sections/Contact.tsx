@@ -302,6 +302,12 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
           </p>
         </div>
 
+        <div className="text-center mb-6">
+          <a href="https://wa.me/213781604556" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-teal-400 hover:text-green-500 font-bold text-lg">
+            WhatsApp: +213 781 60 45 56
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">

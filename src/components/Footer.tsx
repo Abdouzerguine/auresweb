@@ -79,6 +79,9 @@ const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Contact Info & Social Media */}
           <div className="space-y-4">
+            <a href="https://wa.me/213781604556" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-teal-400 hover:text-green-500 font-bold text-lg">
+              WhatsApp: +213 781 60 45 56
+            </a>
             <a
               href="mailto:contact@auresweb.dz"
               className="block text-gray-300 hover:text-teal-400 transition-colors"
