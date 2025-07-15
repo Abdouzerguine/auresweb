@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, Zap, Rocket, Facebook, Instagram, Youtube } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 interface ContactProps {
   currentLang: string;
@@ -266,22 +267,20 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Send form data to email using Formspree (or similar service)
-    const response = await fetch('https://formspree.io/f/xwkgyyqg', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ...formData,
-        _replyto: formData.email,
-        to: 'auresweb05@gmail.com',
-      })
-    });
-    if (response.ok) {
-      alert('Your request has been sent!');
-      setFormData({ name: '', email: '', phone: '', service: '', budget: '', timeline: '', message: '' });
-    } else {
-      alert('There was an error sending your request. Please try again.');
-    }
+    emailjs.send(
+      'service_0jxgqal',
+      'template_spe1spa',
+      formData,
+      'VcAkmne0gx6bdgCHZ'
+    ).then(
+      (result) => {
+        alert('Your request has been sent!');
+        setFormData({ name: '', email: '', phone: '', service: '', budget: '', timeline: '', message: '' });
+      },
+      (error) => {
+        alert('There was an error sending your request. Please try again.');
+      }
+    );
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
