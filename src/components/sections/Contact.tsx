@@ -58,7 +58,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         hours: 'ساعات العمل'
       },
       info: {
-        email: 'contact@auresweb.dz',
+        email: 'auresweb05@gmail.com',
         phone: '+213(0)781604556',
         location: 'الجزائر العاصمة، الجزائر',
         hours: 'الأحد - الخميس: 9:00 - 20:00'
@@ -139,7 +139,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         hours: 'Working Hours'
       },
       info: {
-        email: 'contact@auresweb.dz',
+        email: 'auresweb05@gmail.com',
         phone: '+213(0)781604556',
         location: 'Algiers, Algeria',
         hours: 'Sunday - Thursday: 9:00 AM - 8:00 PM'
@@ -220,7 +220,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         hours: 'Heures de Travail'
       },
       info: {
-        email: 'contact@auresweb.dz',
+        email: 'auresweb05@gmail.com',
         phone: '+213(0)781604556',
         location: 'Alger, Algérie',
         hours: 'Dimanche - Jeudi: 9h00 - 20h00'
@@ -264,9 +264,24 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
 
   const t = translations[currentLang as keyof typeof translations];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    // Send form data to email using Formspree (or similar service)
+    const response = await fetch('https://formspree.io/f/xwkgyyqg', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        ...formData,
+        _replyto: formData.email,
+        to: 'auresweb05@gmail.com',
+      })
+    });
+    if (response.ok) {
+      alert('Your request has been sent!');
+      setFormData({ name: '', email: '', phone: '', service: '', budget: '', timeline: '', message: '' });
+    } else {
+      alert('There was an error sending your request. Please try again.');
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
