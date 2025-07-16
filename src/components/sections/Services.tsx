@@ -19,149 +19,149 @@ const Services: React.FC = () => {
 
   // English, USD, global focus
   const t = {
-    title: 'My Services',
+      title: 'My Services',
     subtitle: 'Modern web solutions for businesses worldwide',
-    whySection: {
+      whySection: {
       title: 'Why Choose Me?',
-      dedication: {
+        dedication: {
         title: 'Personal Dedication',
         description: 'As a solo developer, I provide personal attention to every project, no matter where you are in the world.'
-      },
-      speed: {
+        },
+        speed: {
         title: 'Fast Delivery',
         description: 'Get your website or app delivered in record time, wherever your business is located.'
-      },
-      fresh: {
+        },
+        fresh: {
         title: 'Modern Approach',
         description: 'I combine the latest technologies and design trends to help your business stand out globally.'
-      }
-    },
-    services: [
-      // Web Design Offers
-      {
-        icon: Palette,
-        title: 'Basic Web Design',
+        }
+      },
+      services: [
+        // Web Design Offers
+        {
+          icon: Palette,
+          title: 'Basic Web Design',
         description: 'A professional one-page website with responsive design and custom branding. Perfect for startups and small businesses worldwide.',
         features: ['Modern, responsive design', 'Custom branding (logo & colors)', 'Fast delivery (2-3 days)'],
         price: 'From $299',
-        popular: false,
-        offerType: 'Web Design Offer',
-        categoryKey: 'web-design',
-      },
-      {
-        icon: Palette,
-        title: 'Advanced Web Design',
+          popular: false,
+          offerType: 'Web Design Offer',
+          categoryKey: 'web-design',
+        },
+        {
+          icon: Palette,
+          title: 'Advanced Web Design',
         description: 'Multi-page website with custom sections, portfolio, and professional contact forms. Ideal for growing businesses.',
         features: ['Custom sections & portfolio', 'Professional contact forms', 'Fully responsive'],
         price: 'From $499',
-        popular: true,
-        offerType: 'Web Design Offer',
-        categoryKey: 'web-design',
-      },
-      {
-        icon: Palette,
-        title: 'Corporate Custom Web Design',
+          popular: true,
+          offerType: 'Web Design Offer',
+          categoryKey: 'web-design',
+        },
+        {
+          icon: Palette,
+          title: 'Corporate Custom Web Design',
         description: 'Bespoke corporate website with unique interface, custom graphics, and full branding support for established companies.',
         features: ['Unique interface & graphics', 'Full branding support', 'Advanced features'],
         price: 'From $799',
-        popular: false,
-        offerType: 'Web Design Offer',
-        categoryKey: 'web-design',
-      },
-      // Web Development Offers
-      {
-        icon: Code,
-        title: 'Basic Web Development',
+          popular: false,
+          offerType: 'Web Design Offer',
+          categoryKey: 'web-design',
+        },
+        // Web Development Offers
+        {
+          icon: Code,
+          title: 'Basic Web Development',
         description: 'Simple website or blog with static or dynamic content and a basic admin panel. Fast performance and worldwide delivery.',
         features: ['Static or dynamic site', 'Basic admin panel', 'Fast performance'],
         price: 'From $349',
-        popular: false,
-        offerType: 'Web Development Offer',
-        categoryKey: 'web-dev',
-      },
-      {
-        icon: Code,
-        title: 'Advanced Web Development',
+          popular: false,
+          offerType: 'Web Development Offer',
+          categoryKey: 'web-dev',
+        },
+        {
+          icon: Code,
+          title: 'Advanced Web Development',
         description: 'Dynamic business website with database integration, custom features, and advanced security.',
-        features: ['Database integration', 'Custom features', 'Advanced security'],
+          features: ['Database integration', 'Custom features', 'Advanced security'],
         price: 'From $599',
-        popular: true,
-        offerType: 'Web Development Offer',
-        categoryKey: 'web-dev',
-      },
-      {
-        icon: Code,
-        title: 'Professional Corporate Web Development',
+          popular: true,
+          offerType: 'Web Development Offer',
+          categoryKey: 'web-dev',
+        },
+        {
+          icon: Code,
+          title: 'Professional Corporate Web Development',
         description: 'Enterprise web solutions with CMS, API integration, and high performance for large companies.',
         features: ['CMS & API integration', 'High performance', 'For large companies'],
         price: 'From $999',
-        popular: false,
-        offerType: 'Web Development Offer',
-        categoryKey: 'web-dev',
-      },
-      // E-commerce Offers
-      {
-        icon: ShoppingCart,
-        title: 'Basic E-commerce Store',
+          popular: false,
+          offerType: 'Web Development Offer',
+          categoryKey: 'web-dev',
+        },
+        // E-commerce Offers
+        {
+          icon: ShoppingCart,
+          title: 'Basic E-commerce Store',
         description: 'Simple online store with limited products, manual or online payment, and responsive design.',
         features: ['Limited products', 'Manual or online payment', 'Responsive design'],
         price: 'From $399',
-        popular: false,
-        offerType: 'E-commerce Offer',
-        categoryKey: 'ecommerce',
-      },
-      {
-        icon: ShoppingCart,
-        title: 'Integrated E-commerce Store',
+          popular: false,
+          offerType: 'E-commerce Offer',
+          categoryKey: 'ecommerce',
+        },
+        {
+          icon: ShoppingCart,
+          title: 'Integrated E-commerce Store',
         description: 'Full-featured e-commerce store with inventory management, online payment (PayPal, Stripe, etc.), and advanced admin panel.',
-        features: ['Inventory management', 'Online payment', 'Advanced admin panel'],
+          features: ['Inventory management', 'Online payment', 'Advanced admin panel'],
         price: 'From $799',
-        popular: true,
-        offerType: 'E-commerce Offer',
-        categoryKey: 'ecommerce',
-      },
-      {
-        icon: ShoppingCart,
-        title: 'Professional Corporate E-commerce',
+          popular: true,
+          offerType: 'E-commerce Offer',
+          categoryKey: 'ecommerce',
+        },
+        {
+          icon: ShoppingCart,
+          title: 'Professional Corporate E-commerce',
         description: 'Advanced e-commerce solutions with shipping integration, analytics, and ongoing support.',
         features: ['Shipping integration', 'Analytics & reporting', 'Ongoing support'],
         price: 'From $1299',
-        popular: false,
-        offerType: 'E-commerce Offer',
-        categoryKey: 'ecommerce',
-      },
-      // Web Application Offers
-      {
-        icon: Smartphone,
-        title: 'Basic Web Application',
+          popular: false,
+          offerType: 'E-commerce Offer',
+          categoryKey: 'ecommerce',
+        },
+        // Web Application Offers
+        {
+          icon: Smartphone,
+          title: 'Basic Web Application',
         description: 'Interactive web app with essential features and a simple admin panel. Suitable for startups worldwide.',
-        features: ['Essential features', 'Simple admin panel', 'Responsive design'],
+          features: ['Essential features', 'Simple admin panel', 'Responsive design'],
         price: 'From $699',
-        popular: false,
-        offerType: 'Web Application Offer',
-        categoryKey: 'web-app',
-      },
-      {
-        icon: Smartphone,
-        title: 'Advanced Web Application',
-        description: 'Multi-page web app with database integration and advanced interactive features.',
+          popular: false,
+          offerType: 'Web Application Offer',
+          categoryKey: 'web-app',
+        },
+        {
+          icon: Smartphone,
+          title: 'Advanced Web Application',
+          description: 'Multi-page web app with database integration and advanced interactive features.',
         features: ['Database integration', 'Advanced interactive features', 'Optimized performance'],
         price: 'From $1199',
-        popular: true,
-        offerType: 'Web Application Offer',
-        categoryKey: 'web-app',
-      },
-      {
-        icon: Smartphone,
-        title: 'Professional Corporate Web Application',
+          popular: true,
+          offerType: 'Web Application Offer',
+          categoryKey: 'web-app',
+        },
+        {
+          icon: Smartphone,
+          title: 'Professional Corporate Web Application',
         description: 'Custom enterprise web app with advanced solutions, high security, and ongoing support.',
         features: ['Advanced solutions', 'High security', 'Ongoing support'],
         price: 'From $1799',
-        popular: false,
-        offerType: 'Web Application Offer',
-        categoryKey: 'web-app',
-      }
-    ]
+          popular: false,
+          offerType: 'Web Application Offer',
+          categoryKey: 'web-app',
+        }
+      ]
   };
 
   const [modalOpen, setModalOpen] = React.useState(false);
@@ -365,7 +365,15 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Get your professional website in just 24 hours
             </p>
-            <button className="px-10 py-5 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-teal-500/30 hover:scale-105 transition-all duration-300">
+            <button 
+              className="px-10 py-5 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-teal-500/30 hover:scale-105 transition-all duration-300"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Start Now
             </button>
           </div>
