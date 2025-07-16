@@ -535,6 +535,8 @@ const Services: React.FC = () => {
                       <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
+                      {/* Service Type */}
+                      <div className="text-xs font-semibold text-teal-400 text-center mb-1 uppercase tracking-wide">{offer.offerType}</div>
                       <h4 className="text-lg font-bold text-white mb-2 text-center">{offer.title}</h4>
                       <p className="text-gray-300 mb-4 text-sm text-center">{offer.description}</p>
                       <ul className="space-y-2 mb-4">
