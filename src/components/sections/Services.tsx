@@ -1,6 +1,7 @@
-import React from 'react';
-import { ShoppingCart, Smartphone, Code, Palette, Globe, Rocket, Target, Info, XCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShoppingCart, Smartphone, Code, Palette, Globe, Rocket, Target, Info, XCircle, DollarSign } from 'lucide-react';
 import Contact from './Contact';
+import BudgetSelector from '../BudgetSelector';
 
 interface ServicesProps {
   currentLang: string;
@@ -18,6 +19,8 @@ export interface ServiceOffer {
 }
 
 const Services: React.FC<ServicesProps> = ({ currentLang }) => {
+  const [showBudgetSelector, setShowBudgetSelector] = useState(false);
+  
   const translations = {
     ar: {
       title: 'خدماتي',
@@ -490,6 +493,42 @@ const Services: React.FC<ServicesProps> = ({ currentLang }) => {
 
   const closeModal = () => setModalOpen(false);
 
+  const handleServiceSelect = (service: ServiceOffer) => {
+    // Scroll to contact section when a service is selected
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // If budget selector is shown, render it instead of the main services
+  if (showBudgetSelector) {
+    return (
+      <section className="relative min-h-screen py-24 bg-gray-900/60 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Back Button */}
+          <div className="mb-8">
+            <button
+              onClick={() => setShowBudgetSelector(false)}
+              className="flex items-center text-white hover:text-teal-400 transition-colors duration-300"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              {currentLang === 'ar' ? 'العودة للخدمات' : currentLang === 'fr' ? 'Retour aux Services' : 'Back to Services'}
+            </button>
+          </div>
+          
+          <BudgetSelector 
+            currentLang={currentLang} 
+            services={t.services} 
+            onServiceSelect={handleServiceSelect}
+          />
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="relative min-h-screen py-24 bg-gray-900/60 overflow-hidden">
       {/* 3D Background removed */}
@@ -588,6 +627,29 @@ const Services: React.FC<ServicesProps> = ({ currentLang }) => {
               </div>
             );
           })}
+        </div>
+
+        {/* Budget Selector CTA */}
+        <div className="text-center bg-gradient-to-r from-blue-800/50 via-blue-700/50 to-blue-800/50 rounded-3xl p-12 relative overflow-hidden border border-blue-700/50 backdrop-blur-sm mb-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-pulse" />
+          <div className="relative z-10">
+            <div className="flex items-center justify-center mb-4">
+              <DollarSign className="w-12 h-12 text-blue-400 mr-4" />
+              <h3 className="text-3xl font-bold text-white">
+                {currentLang === 'ar' ? 'لا تعرف ميزانيتك؟' : currentLang === 'fr' ? 'Vous ne connaissez pas votre budget ?' : 'Not sure about your budget?'}
+              </h3>
+            </div>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              {currentLang === 'ar' ? 'اختر نطاق ميزانيتك واكتشف الخدمات المناسبة لك' : currentLang === 'fr' ? 'Choisissez votre fourchette de budget et découvrez les services adaptés' : 'Choose your budget range and discover the right services for you'}
+            </p>
+            <button 
+              onClick={() => setShowBudgetSelector(true)}
+              className="px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center mx-auto"
+            >
+              <DollarSign className="w-5 h-5 mr-2" />
+              {currentLang === 'ar' ? 'اختر ميزانيتك' : currentLang === 'fr' ? 'Sélectionner Budget' : 'Select Budget'}
+            </button>
+          </div>
         </div>
 
         {/* CTA Section */}
