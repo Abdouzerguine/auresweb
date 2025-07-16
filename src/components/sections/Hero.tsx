@@ -10,22 +10,22 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
   const navigate = useNavigate();
   const translations = {
     ar: {
-      headline: 'رؤيتك الرقمية، حية في 24 ساعة',
-      subheadline: 'مطور ويب مستقل من الجزائر يجمع بين الهوية المحلية والمعايير العالمية',
-      cta: 'ابدأ رحلتك الرقمية',
+      headline: 'حلول ويب عصرية للعالم كله',
+      subheadline: 'مطور ويب مستقل يقدم مواقع وتطبيقات احترافية عالية الأداء لعملاء من جميع أنحاء العالم.',
+      cta: 'ابدأ مشروعك الآن',
       watchDemo: 'شاهد أعمالي',
-      guarantee: '24 ساعة تسليم مضمون',
+      guarantee: 'تسليم سريع عالمي',
       features: [
         'تصميم احترافي متجاوب',
-        'تسليم فائق السرعة',
+        'تسليم سريع لأي مكان',
         'دعم شخصي مخصص',
-        'معايير عالمية'
+        'معايير دولية'
       ],
       stats: {
-        delivery: 'ساعة تسليم',
+        delivery: 'تسليم عالمي',
         projects: 'مشروع مكتمل',
         satisfaction: 'رضا العملاء',
-        speed: 'أسرع من المنافسين'
+        speed: 'أداء عالي'
       },
       values: {
         clarity: 'وضوح',
@@ -34,22 +34,22 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
       }
     },
     en: {
-      headline: 'Your Digital Vision, Live in 24 Hours',
-      subheadline: 'Freelance web developer from Algeria bridging local identity with global digital standards',
-      cta: 'Start Your Digital Journey',
+      headline: 'Modern Web Solutions for the World',
+      subheadline: 'Freelance web developer delivering beautiful, high-performance websites and apps for clients worldwide.',
+      cta: 'Start Your Project',
       watchDemo: 'View My Work',
-      guarantee: '24-hour delivery guaranteed',
+      guarantee: 'Fast, global delivery',
       features: [
         'Professional responsive design',
-        'Lightning-fast delivery',
+        'Fast worldwide delivery',
         'Dedicated personal support',
-        'Global standards'
+        'International standards'
       ],
       stats: {
-        delivery: 'Hour Delivery',
+        delivery: 'Global Delivery',
         projects: 'Projects Completed',
         satisfaction: 'Client Satisfaction',
-        speed: 'Faster Than Competitors'
+        speed: 'High Performance'
       },
       values: {
         clarity: 'Clarity',
@@ -58,22 +58,22 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
       }
     },
     fr: {
-      headline: 'Votre Vision Numérique, En Ligne en 24 Heures',
-      subheadline: 'Développeur web freelance d\'Algérie alliant identité locale et standards numériques mondiaux',
-      cta: 'Commencez Votre Voyage Numérique',
+      headline: 'Solutions Web Modernes pour le Monde',
+      subheadline: 'Développeur web freelance livrant des sites et applications performants et élégants pour des clients partout dans le monde.',
+      cta: 'Lancez Votre Projet',
       watchDemo: 'Voir Mon Travail',
-      guarantee: 'Livraison en 24h garantie',
+      guarantee: 'Livraison rapide, partout dans le monde',
       features: [
         'Design professionnel responsive',
-        'Livraison ultra-rapide',
+        'Livraison rapide dans le monde entier',
         'Support personnel dédié',
-        'Standards mondiaux'
+        'Standards internationaux'
       ],
       stats: {
-        delivery: 'Heures Livraison',
+        delivery: 'Livraison mondiale',
         projects: 'Projets Terminés',
         satisfaction: 'Satisfaction Client',
-        speed: 'Plus Rapide Que Concurrents'
+        speed: 'Haute Performance'
       },
       values: {
         clarity: 'Clarté',

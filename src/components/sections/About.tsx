@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Zap, Globe, Target, Rocket, Star, Clock, Wrench, Sparkles } from 'lucide-react';
+import { Heart, Zap, Globe, Target } from 'lucide-react';
 import ThreeBackground from '../ThreeBackground';
 
 interface AboutProps {
@@ -10,119 +10,119 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
   const translations = {
     ar: {
       title: 'قصة AuresWeb',
-      subtitle: 'مطور ويب شغوف يجمع بين الهوية الجزائرية والابتكار العالمي',
+      subtitle: 'مطور ويب شغوف يبني حلولاً حديثة لعملاء من جميع أنحاء العالم',
       story: {
         title: 'رحلتي',
-        content: 'بدأت رحلتي في عالم البرمجة منذ 3 سنوات بحلم بسيط: مساعدة الشركات الجزائرية على بناء حضور رقمي قوي. اليوم، أقدم مواقع ويب احترافية في وقت قياسي، مجمعاً بين الجودة العالمية والفهم العميق للسوق المحلي.'
+        content: 'أنا مطور ويب شغوف أحب تحويل الأفكار إلى مواقع وتطبيقات ويب جميلة وعملية. أركز على تصميمات عصرية متجاوبة تحقق نتائج للأعمال حول العالم. كل مشروع يحصل على كامل اهتمامي وتفانيي لضمان أعلى جودة، أينما كنت.'
       },
       mission: {
         title: 'مهمتي',
-        content: 'أؤمن بأن كل فكرة تستحق أن تصبح واقعاً رقمياً. مهمتي هي تحويل رؤى العملاء إلى مواقع ويب استثنائية تعكس هويتهم وتحقق أهدافهم التجارية.'
+        content: 'أؤمن أن كل فكرة تستحق أن تصبح واقعاً رقمياً. مهمتي هي مساعدة العملاء من جميع أنحاء العالم على تحويل رؤاهم إلى مواقع وتطبيقات استثنائية تعكس علامتهم التجارية وتحقق أهدافهم.'
       },
       values: [
         {
           icon: Zap,
-          title: 'السرعة الفائقة',
-          description: 'تسليم في 24 ساعة دون التنازل عن الجودة'
+          title: 'السرعة',
+          description: 'تسليم سريع أينما كنت في العالم'
         },
         {
           icon: Heart,
-          title: 'الشغف والتفاني',
-          description: 'حب حقيقي للتطوير والاهتمام بكل تفصيل'
+          title: 'التفاني الشخصي',
+          description: 'كل عميل يحصل على كامل اهتمامي ورعايتي'
         },
         {
           icon: Globe,
-          title: 'رؤية عالمية',
-          description: 'معايير دولية مع فهم عميق للسوق المحلي'
+          title: 'خبرة عالمية',
+          description: 'أعمل عن بعد مع عملاء من أي دولة'
         },
         {
           icon: Target,
-          title: 'التركيز على النتائج',
-          description: 'كل مشروع مصمم لتحقيق أهداف محددة'
+          title: 'النتائج',
+          description: 'كل مشروع مصمم لتحقيق أهدافك التجارية'
         }
       ],
       coreValues: {
-        title: 'قيمي الأساسية',
+        title: 'قيمــي',
         clarity: {
           title: 'الوضوح',
-          description: 'تصميمات نظيفة وواضحة تنقل الرسالة بفعالية'
+          description: 'تصميمات نظيفة وواضحة تنقل رسالتك بفعالية'
         },
         connectivity: {
           title: 'الاتصال',
-          description: 'ربط الشركات بعملائها من خلال تجارب رقمية متميزة'
+          description: 'أساعدك على التواصل مع عملائك حول العالم'
         },
         growth: {
           title: 'النمو',
-          description: 'حلول قابلة للتطوير تنمو مع نجاح عملائي'
+          description: 'حلول قابلة للتطوير تنمو مع عملك'
         }
       },
       skills: {
         title: 'خبراتي التقنية',
-        frontend: 'تطوير الواجهات الأمامية',
-        backend: 'تطوير الخلفية',
-        tools: 'الأدوات والتقنيات'
+        frontend: 'تطوير الواجهات الأمامية (React, Next.js, إلخ)',
+        backend: 'تطوير الخلفية (Node.js, Express, إلخ)',
+        tools: 'الأدوات والتقنيات: Figma, Vercel, Stripe, PayPal، والمزيد'
       },
       experience: {
-        title: 'إنجازاتي',
-        years: '3+ سنوات خبرة',
-        projects: '15+ مشروع مكتمل',
-        clients: '12+ عميل راضٍ',
-        speed: '24 ساعة متوسط التسليم'
+        title: 'لماذا تختارني',
+        quality: 'جودة عالية',
+        speed: 'تسليم سريع',
+        support: 'دعم مستمر',
+        innovation: 'حلول حديثة'
       }
     },
     en: {
       title: 'The AuresWeb Story',
-      subtitle: 'Passionate web developer bridging Algerian identity with global innovation',
+      subtitle: 'Passionate web developer building modern solutions for clients worldwide',
       story: {
         title: 'My Journey',
-        content: 'I\'m a passionate web developer who loves turning ideas into beautiful, functional websites. I focus on creating modern, responsive designs that not only look great but also deliver results. Every project I work on gets my full attention and dedication to ensure the highest quality.'
+        content: 'I’m a passionate web developer who loves turning ideas into beautiful, functional websites and web apps. I focus on creating modern, responsive designs that deliver results for businesses around the globe. Every project gets my full attention and dedication to ensure the highest quality, no matter where you are.'
       },
       mission: {
         title: 'My Mission',
-        content: 'I believe every idea deserves to become digital reality. My mission is to transform client visions into exceptional websites that reflect their identity and achieve their business goals.'
+        content: 'I believe every idea deserves to become a digital reality. My mission is to help clients from all over the world bring their visions to life with exceptional websites and applications that reflect their brand and achieve their business goals.'
       },
       values: [
         {
           icon: Zap,
-          title: 'Lightning Speed',
-          description: '24-hour delivery without compromising quality'
+          title: 'Fast Delivery',
+          description: 'Get your project delivered in record time, wherever you are'
         },
         {
           icon: Heart,
-          title: 'Passion & Dedication',
-          description: 'Genuine love for development and attention to every detail'
+          title: 'Personal Dedication',
+          description: 'Every client gets my full attention and care'
         },
         {
           icon: Globe,
-          title: 'Global Vision',
-          description: 'International standards with deep local market understanding'
+          title: 'Global Experience',
+          description: 'I work remotely with clients from any country'
         },
         {
           icon: Target,
           title: 'Results-Focused',
-          description: 'Every project designed to achieve specific goals'
+          description: 'Every project designed to achieve your business goals'
         }
       ],
       coreValues: {
         title: 'My Core Values',
         clarity: {
           title: 'Clarity',
-          description: 'Clean, clear designs that communicate messages effectively'
+          description: 'Clean, clear designs that communicate your message'
         },
         connectivity: {
           title: 'Connectivity',
-          description: 'Connecting businesses with their customers through exceptional digital experiences'
+          description: 'Helping you connect with your customers worldwide'
         },
         growth: {
           title: 'Growth',
-          description: 'Scalable solutions that grow with my clients\' success'
+          description: 'Scalable solutions that grow with your business'
         }
       },
       skills: {
         title: 'My Technical Expertise',
-        frontend: 'Frontend Development',
-        backend: 'Backend Development',
-        tools: 'Tools & Technologies'
+        frontend: 'Frontend Development (React, Next.js, etc.)',
+        backend: 'Backend Development (Node.js, Express, etc.)',
+        tools: 'Tools & Technologies: Figma, Vercel, Stripe, PayPal, and more'
       },
       experience: {
         title: 'Why Choose Me',
@@ -133,65 +133,65 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
       }
     },
     fr: {
-      title: 'L\'Histoire d\'AuresWeb',
-      subtitle: 'Développeur web passionné alliant identité algérienne et innovation mondiale',
+      title: 'L’histoire d’AuresWeb',
+      subtitle: 'Développeur web passionné créant des solutions modernes pour des clients du monde entier',
       story: {
-        title: 'Mon Parcours',
-        content: 'Je suis un développeur web passionné qui aime transformer les idées en sites web beaux et fonctionnels. Je me concentre sur la création de designs modernes et responsifs qui non seulement sont esthétiques mais aussi produisent des résultats. Chaque projet sur lequel je travaille reçoit toute mon attention et mon dévouement pour garantir la plus haute qualité.'
+        title: 'Mon parcours',
+        content: 'Je suis un développeur web passionné qui aime transformer les idées en sites et applications web beaux et fonctionnels. Je me concentre sur des designs modernes et responsifs qui apportent des résultats aux entreprises partout dans le monde. Chaque projet reçoit toute mon attention et mon engagement pour garantir la meilleure qualité, où que vous soyez.'
       },
       mission: {
-        title: 'Ma Mission',
-        content: 'Je crois que chaque idée mérite de devenir réalité numérique. Ma mission est de transformer les visions des clients en sites web exceptionnels qui reflètent leur identité et atteignent leurs objectifs commerciaux.'
+        title: 'Ma mission',
+        content: 'Je crois que chaque idée mérite de devenir une réalité numérique. Ma mission est d’aider des clients du monde entier à concrétiser leurs visions avec des sites et applications exceptionnels qui reflètent leur marque et atteignent leurs objectifs.'
       },
       values: [
         {
           icon: Zap,
-          title: 'Vitesse Éclair',
-          description: 'Livraison en 24h sans compromettre la qualité'
+          title: 'Livraison rapide',
+          description: 'Recevez votre projet rapidement, où que vous soyez'
         },
         {
           icon: Heart,
-          title: 'Passion & Dévouement',
-          description: 'Amour véritable pour le développement et attention à chaque détail'
+          title: 'Dévouement personnel',
+          description: 'Chaque client bénéficie de toute mon attention'
         },
         {
           icon: Globe,
-          title: 'Vision Mondiale',
-          description: 'Standards internationaux avec compréhension profonde du marché local'
+          title: 'Expérience internationale',
+          description: 'Je travaille à distance avec des clients de tous pays'
         },
         {
           icon: Target,
-          title: 'Axé sur les Résultats',
-          description: 'Chaque projet conçu pour atteindre des objectifs spécifiques'
+          title: 'Axé sur les résultats',
+          description: 'Chaque projet conçu pour atteindre vos objectifs business'
         }
       ],
       coreValues: {
-        title: 'Mes Valeurs Fondamentales',
+        title: 'Mes valeurs',
         clarity: {
           title: 'Clarté',
-          description: 'Designs propres et clairs qui communiquent efficacement les messages'
+          description: 'Des designs propres et clairs qui communiquent efficacement votre message'
         },
         connectivity: {
           title: 'Connectivité',
-          description: 'Connecter les entreprises avec leurs clients via des expériences numériques exceptionnelles'
+          description: 'Vous aider à connecter avec vos clients dans le monde entier'
         },
         growth: {
           title: 'Croissance',
-          description: 'Solutions évolutives qui grandissent avec le succès de mes clients'
+          description: 'Des solutions évolutives qui grandissent avec votre entreprise'
         }
       },
       skills: {
-        title: 'Mon Expertise Technique',
-        frontend: 'Développement Frontend',
-        backend: 'Développement Backend',
-        tools: 'Outils & Technologies'
+        title: 'Compétences techniques',
+        frontend: 'Développement frontend (React, Next.js, etc.)',
+        backend: 'Développement backend (Node.js, Express, etc.)',
+        tools: 'Outils & technologies : Figma, Vercel, Stripe, PayPal, et plus'
       },
       experience: {
-        title: 'Pourquoi Me Choisir',
-        quality: 'Qualité Premium',
-        speed: 'Livraison Rapide',
-        support: 'Support Continu',
-        innovation: 'Solutions Modernes'
+        title: 'Pourquoi me choisir',
+        quality: 'Qualité premium',
+        speed: 'Livraison rapide',
+        support: 'Support continu',
+        innovation: 'Solutions modernes'
       }
     }
   };
@@ -233,7 +233,7 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-700/50 hover:shadow-teal-500/20 transition-all duration-500">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/30">
-                  <Rocket className="w-6 h-6 text-white" />
+                  {/* <Rocket className="w-6 h-6 text-white" /> */}
                 </div>
                 <h3 className="text-2xl font-bold text-white">{t.story.title}</h3>
               </div>
@@ -247,7 +247,7 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-700/50 hover:shadow-blue-500/20 transition-all duration-500">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                  <Target className="w-6 h-6 text-white" />
+                  {/* <Target className="w-6 h-6 text-white" /> */}
                 </div>
                 <h3 className="text-2xl font-bold text-white">{t.mission.title}</h3>
               </div>
@@ -381,28 +381,28 @@ const About: React.FC<AboutProps> = ({ currentLang }) => {
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-teal-500/30">
                 <div className="flex justify-center mb-2">
-                  <Star className="w-8 h-8 text-teal-400" />
+                  {/* <Star className="w-8 h-8 text-teal-400" /> */}
                 </div>
                 <div className="text-gray-300 text-sm font-medium">{t.experience.quality}</div>
               </div>
               
               <div className="text-center bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-blue-500/30">
                 <div className="flex justify-center mb-2">
-                  <Clock className="w-8 h-8 text-blue-400" />
+                  {/* <Clock className="w-8 h-8 text-blue-400" /> */}
                 </div>
                 <div className="text-gray-300 text-sm font-medium">{t.experience.speed}</div>
               </div>
               
               <div className="text-center bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-green-500/30">
                 <div className="flex justify-center mb-2">
-                  <Wrench className="w-8 h-8 text-green-400" />
+                  {/* <Wrench className="w-8 h-8 text-green-400" /> */}
                 </div>
                 <div className="text-gray-300 text-sm font-medium">{t.experience.support}</div>
               </div>
 
               <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300 border border-purple-500/30">
                 <div className="flex justify-center mb-2">
-                  <Sparkles className="w-8 h-8 text-purple-400" />
+                  {/* <Sparkles className="w-8 h-8 text-purple-400" /> */}
                 </div>
                 <div className="text-gray-300 text-sm font-medium">{t.experience.innovation}</div>
               </div>

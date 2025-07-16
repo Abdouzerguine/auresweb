@@ -21,7 +21,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
   const translations = {
     ar: {
       title: 'ابدأ مشروعك الآن',
-      subtitle: 'حول فكرتك إلى واقع رقمي في 24 ساعة فقط',
+      subtitle: 'اعمل مع مطور ويب عالمي أينما كنت في العالم!',
       form: {
         name: 'الاسم الكامل',
         email: 'البريد الإلكتروني',
@@ -40,10 +40,10 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
           'صيانة ودعم'
         ],
         budgets: [
-          'أقل من 20,000 دج',
-          '20,000 - 50,000 دج',
-          '50,000 - 100,000 دج',
-          'أكثر من 100,000 دج'
+          'أقل من $300',
+          '$300 - $600',
+          '$600 - $1200',
+          'أكثر من $1200'
         ],
         timelines: [
           '24 ساعة (عاجل)',
@@ -57,34 +57,36 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         email: 'البريد الإلكتروني',
         phone: 'الهاتف',
         location: 'الموقع',
-        hours: 'ساعات العمل'
+        hours: 'ساعات العمل',
+        payment: 'طرق الدفع'
       },
       info: {
         email: 'auresweb05@gmail.com',
         phone: '+213(0)781604556',
-        location: 'الجزائر العاصمة، الجزائر',
-        hours: 'الأحد - الخميس: 9:00 - 20:00'
+        location: 'عن بعد / جميع أنحاء العالم',
+        hours: 'الأحد - الخميس: 9:00 - 20:00 (UTC+1)',
+        payment: 'بايبال، سترايب، وايز، بطاقة بنكية (مدفوعات دولية مقبولة)'
       },
       process: {
         title: 'عملية العمل السريعة',
         steps: [
           {
-            title: 'التواصل الفوري',
+            title: 'تواصل فوري',
             description: 'رد خلال ساعة واحدة لمناقشة مشروعك',
             time: '1h'
           },
           {
-            title: 'التخطيط السريع',
+            title: 'تخطيط سريع',
             description: 'خطة مفصلة وتصميم أولي في ساعات',
             time: '3h'
           },
           {
-            title: 'التطوير المكثف',
+            title: 'تطوير مكثف',
             description: 'تطوير مكثف باستخدام أحدث التقنيات',
             time: '18h'
           },
           {
-            title: 'التسليم والدعم',
+            title: 'تسليم ودعم',
             description: 'تسليم المشروع مع دعم مجاني',
             time: '2h'
           }
@@ -93,7 +95,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
       guarantee: {
         title: 'ضماناتي',
         items: [
-          'تسليم في 24 ساعة',
+          'تسليم سريع عالمي',
           'جودة احترافية',
           'دعم مجاني شهر',
           'مراجعات مجانية'
@@ -102,7 +104,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
     },
     en: {
       title: 'Start Your Project Now',
-      subtitle: 'Turn your idea into digital reality in just 24 hours',
+      subtitle: 'Work with a global web developer—wherever you are in the world!',
       form: {
         name: 'Full Name',
         email: 'Email Address',
@@ -121,10 +123,10 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
           'Maintenance & Support'
         ],
         budgets: [
-          'Less than $120',
-          '$120 - $300',
+          'Less than $300',
           '$300 - $600',
-          'More than $600'
+          '$600 - $1200',
+          'More than $1200'
         ],
         timelines: [
           '24 hours (urgent)',
@@ -138,13 +140,15 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         email: 'Email',
         phone: 'Phone',
         location: 'Location',
-        hours: 'Working Hours'
+        hours: 'Working Hours',
+        payment: 'Payment Methods'
       },
       info: {
         email: 'auresweb05@gmail.com',
         phone: '+213(0)781604556',
-        location: 'Algiers, Algeria',
-        hours: 'Sunday - Thursday: 9:00 AM - 8:00 PM'
+        location: 'Remote / Worldwide',
+        hours: 'Sunday - Thursday: 9:00 AM - 8:00 PM (UTC+1)',
+        payment: 'PayPal, Stripe, Wise, Credit/Debit Card (International payments accepted)'
       },
       process: {
         title: 'Fast Work Process',
@@ -174,7 +178,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
       guarantee: {
         title: 'My Guarantees',
         items: [
-          '24-hour delivery',
+          'Fast, global delivery',
           'Professional quality',
           'Free 1-month support',
           'Free revisions'
@@ -183,7 +187,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
     },
     fr: {
       title: 'Démarrez Votre Projet Maintenant',
-      subtitle: 'Transformez votre idée en réalité numérique en seulement 24 heures',
+      subtitle: 'Collaborez avec un développeur web international, où que vous soyez !',
       form: {
         name: 'Nom Complet',
         email: 'Adresse Email',
@@ -198,14 +202,14 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
           'Développement Web',
           'Boutique E-commerce',
           'Application Web',
-          'Optimisation Performance',
+          'Optimisation des Performances',
           'Maintenance & Support'
         ],
         budgets: [
-          'Moins de 120€',
-          '120€ - 300€',
-          '300€ - 600€',
-          'Plus de 600€'
+          'Moins de $300',
+          '$300 - $600',
+          '$600 - $1200',
+          'Plus de $1200'
         ],
         timelines: [
           '24 heures (urgent)',
@@ -215,33 +219,35 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         ]
       },
       contact: {
-        title: 'Informations de Contact',
+        title: 'Informations de contact',
         email: 'Email',
         phone: 'Téléphone',
         location: 'Localisation',
-        hours: 'Heures de Travail'
+        hours: 'Horaires',
+        payment: 'Moyens de paiement'
       },
       info: {
         email: 'auresweb05@gmail.com',
         phone: '+213(0)781604556',
-        location: 'Alger, Algérie',
-        hours: 'Dimanche - Jeudi: 9h00 - 20h00'
+        location: 'À distance / Partout dans le monde',
+        hours: 'Dimanche - Jeudi : 9h00 - 20h00 (UTC+1)',
+        payment: 'PayPal, Stripe, Wise, Carte bancaire (paiements internationaux acceptés)'
       },
       process: {
-        title: 'Processus de Travail Rapide',
+        title: 'Processus de travail rapide',
         steps: [
           {
-            title: 'Contact Instantané',
-            description: 'Réponse en 1 heure pour discuter de votre projet',
+            title: 'Contact instantané',
+            description: 'Réponse sous 1h pour discuter de votre projet',
             time: '1h'
           },
           {
-            title: 'Planification Rapide',
+            title: 'Planification rapide',
             description: 'Plan détaillé et design initial en quelques heures',
             time: '3h'
           },
           {
-            title: 'Développement Intensif',
+            title: 'Développement intensif',
             description: 'Développement intensif avec les dernières technologies',
             time: '18h'
           },
@@ -253,11 +259,11 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         ]
       },
       guarantee: {
-        title: 'Mes Garanties',
+        title: 'Mes garanties',
         items: [
-          'Livraison en 24h',
+          'Livraison rapide, partout dans le monde',
           'Qualité professionnelle',
-          'Support gratuit 1 mois',
+          '1 mois de support gratuit',
           'Révisions gratuites'
         ]
       }
