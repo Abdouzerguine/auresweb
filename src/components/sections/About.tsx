@@ -9,186 +9,111 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ currentLang }) => {
   const translations = {
     ar: {
-      title: 'قصة AuresWeb',
-      subtitle: 'مطور ويب شغوف يبني حلولاً حديثة لعملاء من جميع أنحاء العالم',
+      title: 'عن المحرر',
+      subtitle: 'شريكك الإبداعي للنجاح الرقمي',
       story: {
-        title: 'رحلتي',
-        content: 'أنا مطور ويب شغوف أحب تحويل الأفكار إلى مواقع وتطبيقات ويب جميلة وعملية. أركز على تصميمات عصرية متجاوبة تحقق نتائج للأعمال حول العالم. كل مشروع يحصل على كامل اهتمامي وتفانيي لضمان أعلى جودة، أينما كنت.'
+        title: 'قصتي',
+        content: 'أنا محرر رقمي شغوف بتحويل الأفكار إلى محتوى بصري ملهم وتجارب رقمية مؤثرة. أركز على تقديم حلول عصرية تساعد العلامات التجارية والمبدعين على التألق عبر الإنترنت. كل مشروع ينال كامل اهتمامي الإبداعي لضمان نتائج استثنائية.'
       },
       mission: {
-        title: 'مهمتي',
-        content: 'أؤمن أن كل فكرة تستحق أن تصبح واقعاً رقمياً. مهمتي هي مساعدة العملاء من جميع أنحاء العالم على تحويل رؤاهم إلى مواقع وتطبيقات استثنائية تعكس علامتهم التجارية وتحقق أهدافهم.'
+        title: 'رسالتي',
+        content: 'رسالتي هي مساعدتك في تحويل رؤيتك إلى واقع رقمي مميز من خلال التصميم والتحرير والحلول الرقمية التي تعكس علامتك وتحقق أهدافك.'
       },
       values: [
-        {
-          icon: Zap,
-          title: 'السرعة',
-          description: 'تسليم سريع أينما كنت في العالم'
-        },
-        {
-          icon: Heart,
-          title: 'التفاني الشخصي',
-          description: 'كل عميل يحصل على كامل اهتمامي ورعايتي'
-        },
-        {
-          icon: Globe,
-          title: 'خبرة عالمية',
-          description: 'أعمل عن بعد مع عملاء من أي دولة'
-        },
-        {
-          icon: Target,
-          title: 'النتائج',
-          description: 'كل مشروع مصمم لتحقيق أهدافك التجارية'
-        }
+        { icon: Zap, title: 'إبداع متجدد', description: 'حلول مبتكرة لكل مشروع' },
+        { icon: Heart, title: 'تفانٍ شخصي', description: 'كل عميل يحظى باهتمامي الكامل' },
+        { icon: Globe, title: 'انتشار عالمي', description: 'أعمل مع عملاء من جميع أنحاء العالم' },
+        { icon: Target, title: 'تركيز على النتائج', description: 'كل مشروع مصمم لتحقيق أهدافك' }
       ],
       coreValues: {
         title: 'قيمــي',
-        clarity: {
-          title: 'الوضوح',
-          description: 'تصميمات نظيفة وواضحة تنقل رسالتك بفعالية'
-        },
-        connectivity: {
-          title: 'الاتصال',
-          description: 'أساعدك على التواصل مع عملائك حول العالم'
-        },
-        growth: {
-          title: 'النمو',
-          description: 'حلول قابلة للتطوير تنمو مع عملك'
-        }
+        clarity: { title: 'الوضوح', description: 'تصاميم ومحتوى ينقل رسالتك بفعالية' },
+        connectivity: { title: 'الاتصال', description: 'أساعدك على التواصل مع جمهورك في كل مكان' },
+        growth: { title: 'النمو', description: 'حلول تنمو مع طموحاتك' }
       },
       skills: {
-        title: 'خبراتي التقنية',
-        frontend: 'تطوير الواجهات الأمامية (React, Next.js, إلخ)',
-        backend: 'تطوير الخلفية (Node.js, Express, إلخ)',
-        tools: 'الأدوات والتقنيات: Figma, Vercel, Stripe, PayPal، والمزيد'
+        title: 'مهاراتي الإبداعية',
+        frontend: 'تصميم وتحرير (Canva, Figma, Adobe)',
+        backend: 'إنشاء محتوى رقمي',
+        tools: 'العلامة التجارية، وسائل التواصل، السرد البصري'
       },
       experience: {
         title: 'لماذا تختارني',
-        quality: 'جودة عالية',
+        quality: 'جودة إبداعية',
         speed: 'تسليم سريع',
         support: 'دعم مستمر',
-        innovation: 'حلول حديثة'
+        innovation: 'حلول عصرية'
       }
     },
     en: {
-      title: 'The AuresWeb Story',
-      subtitle: 'Passionate web developer building modern solutions for clients worldwide',
+      title: 'About the Editor',
+      subtitle: 'Your Creative Partner for Digital Success',
       story: {
-        title: 'My Journey',
-        content: 'I’m a passionate web developer who loves turning ideas into beautiful, functional websites and web apps. I focus on creating modern, responsive designs that deliver results for businesses around the globe. Every project gets my full attention and dedication to ensure the highest quality, no matter where you are.'
+        title: 'My Story',
+        content: 'I’m a passionate digital editor dedicated to transforming ideas into captivating visuals and compelling content. My focus is on delivering modern, impactful solutions that help brands and creators shine online. Every project receives my full creative attention and care, ensuring results that stand out.'
       },
       mission: {
         title: 'My Mission',
-        content: 'I believe every idea deserves to become a digital reality. My mission is to help clients from all over the world bring their visions to life with exceptional websites and applications that reflect their brand and achieve their business goals.'
+        content: 'My mission is to help you bring your vision to life with exceptional design, editing, and digital solutions that reflect your unique brand and achieve your goals.'
       },
       values: [
-        {
-          icon: Zap,
-          title: 'Fast Delivery',
-          description: 'Get your project delivered in record time, wherever you are'
-        },
-        {
-          icon: Heart,
-          title: 'Personal Dedication',
-          description: 'Every client gets my full attention and care'
-        },
-        {
-          icon: Globe,
-          title: 'Global Experience',
-          description: 'I work remotely with clients from any country'
-        },
-        {
-          icon: Target,
-          title: 'Results-Focused',
-          description: 'Every project designed to achieve your business goals'
-        }
+        { icon: Zap, title: 'Creative Excellence', description: 'Innovative solutions for every project' },
+        { icon: Heart, title: 'Personal Dedication', description: 'Every client gets my full creative attention' },
+        { icon: Globe, title: 'Global Reach', description: 'Working with clients worldwide' },
+        { icon: Target, title: 'Results-Focused', description: 'Every project designed to achieve your goals' }
       ],
       coreValues: {
         title: 'My Core Values',
-        clarity: {
-          title: 'Clarity',
-          description: 'Clean, clear designs that communicate your message'
-        },
-        connectivity: {
-          title: 'Connectivity',
-          description: 'Helping you connect with your customers worldwide'
-        },
-        growth: {
-          title: 'Growth',
-          description: 'Scalable solutions that grow with your business'
-        }
+        clarity: { title: 'Clarity', description: 'Designs and content that communicate your message' },
+        connectivity: { title: 'Connectivity', description: 'Helping you connect with your audience everywhere' },
+        growth: { title: 'Growth', description: 'Solutions that grow with your ambitions' }
       },
       skills: {
-        title: 'My Technical Expertise',
-        frontend: 'Frontend Development (React, Next.js, etc.)',
-        backend: 'Backend Development (Node.js, Express, etc.)',
-        tools: 'Tools & Technologies: Figma, Vercel, Stripe, PayPal, and more'
+        title: 'My Creative Skills',
+        frontend: 'Design & Editing (Canva, Figma, Adobe)',
+        backend: 'Content Creation',
+        tools: 'Branding, Social Media, Visual Storytelling'
       },
       experience: {
         title: 'Why Choose Me',
-        quality: 'Premium Quality',
+        quality: 'Creative Quality',
         speed: 'Fast Delivery',
         support: 'Ongoing Support',
         innovation: 'Modern Solutions'
       }
     },
     fr: {
-      title: 'L’histoire d’AuresWeb',
-      subtitle: 'Développeur web passionné créant des solutions modernes pour des clients du monde entier',
+      title: 'À propos de l’éditeur',
+      subtitle: 'Votre partenaire créatif pour la réussite digitale',
       story: {
-        title: 'Mon parcours',
-        content: 'Je suis un développeur web passionné qui aime transformer les idées en sites et applications web beaux et fonctionnels. Je me concentre sur des designs modernes et responsifs qui apportent des résultats aux entreprises partout dans le monde. Chaque projet reçoit toute mon attention et mon engagement pour garantir la meilleure qualité, où que vous soyez.'
+        title: 'Mon histoire',
+        content: 'Je suis un éditeur numérique passionné, dédié à transformer les idées en visuels captivants et en contenus percutants. Je me concentre sur des solutions modernes et impactantes qui aident les marques et créateurs à briller en ligne. Chaque projet reçoit toute mon attention créative pour garantir des résultats remarquables.'
       },
       mission: {
         title: 'Ma mission',
-        content: 'Je crois que chaque idée mérite de devenir une réalité numérique. Ma mission est d’aider des clients du monde entier à concrétiser leurs visions avec des sites et applications exceptionnels qui reflètent leur marque et atteignent leurs objectifs.'
+        content: 'Ma mission est de vous aider à concrétiser votre vision grâce à des solutions de design, d’édition et digitales exceptionnelles qui reflètent votre marque et atteignent vos objectifs.'
       },
       values: [
-        {
-          icon: Zap,
-          title: 'Livraison rapide',
-          description: 'Recevez votre projet rapidement, où que vous soyez'
-        },
-        {
-          icon: Heart,
-          title: 'Dévouement personnel',
-          description: 'Chaque client bénéficie de toute mon attention'
-        },
-        {
-          icon: Globe,
-          title: 'Expérience internationale',
-          description: 'Je travaille à distance avec des clients de tous pays'
-        },
-        {
-          icon: Target,
-          title: 'Axé sur les résultats',
-          description: 'Chaque projet conçu pour atteindre vos objectifs business'
-        }
+        { icon: Zap, title: 'Excellence créative', description: 'Des solutions innovantes pour chaque projet' },
+        { icon: Heart, title: 'Dévouement personnel', description: 'Chaque client bénéficie de toute mon attention créative' },
+        { icon: Globe, title: 'Portée mondiale', description: 'Je travaille avec des clients du monde entier' },
+        { icon: Target, title: 'Axé sur les résultats', description: 'Chaque projet conçu pour atteindre vos objectifs' }
       ],
       coreValues: {
         title: 'Mes valeurs',
-        clarity: {
-          title: 'Clarté',
-          description: 'Des designs propres et clairs qui communiquent efficacement votre message'
-        },
-        connectivity: {
-          title: 'Connectivité',
-          description: 'Vous aider à connecter avec vos clients dans le monde entier'
-        },
-        growth: {
-          title: 'Croissance',
-          description: 'Des solutions évolutives qui grandissent avec votre entreprise'
-        }
+        clarity: { title: 'Clarté', description: 'Des designs et contenus qui transmettent votre message' },
+        connectivity: { title: 'Connectivité', description: 'Vous aider à connecter avec votre audience partout' },
+        growth: { title: 'Croissance', description: 'Des solutions qui évoluent avec vos ambitions' }
       },
       skills: {
-        title: 'Compétences techniques',
-        frontend: 'Développement frontend (React, Next.js, etc.)',
-        backend: 'Développement backend (Node.js, Express, etc.)',
-        tools: 'Outils & technologies : Figma, Vercel, Stripe, PayPal, et plus'
+        title: 'Mes compétences créatives',
+        frontend: 'Design & Édition (Canva, Figma, Adobe)',
+        backend: 'Création de contenu',
+        tools: 'Branding, réseaux sociaux, storytelling visuel'
       },
       experience: {
         title: 'Pourquoi me choisir',
-        quality: 'Qualité premium',
+        quality: 'Qualité créative',
         speed: 'Livraison rapide',
         support: 'Support continu',
         innovation: 'Solutions modernes'

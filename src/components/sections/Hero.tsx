@@ -10,22 +10,22 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
   const navigate = useNavigate();
   const translations = {
     ar: {
-      headline: 'حلول ويب عصرية للعالم كله',
-      subheadline: 'مطور ويب مستقل يقدم مواقع وتطبيقات احترافية عالية الأداء لعملاء من جميع أنحاء العالم.',
+      headline: 'محرر رقمي مبدع للعلامات التجارية الحديثة',
+      subheadline: 'أصمم محتوى بصرياً رائعاً وتجارب رقمية سلسة للأعمال والمبدعين حول العالم.',
       cta: 'ابدأ مشروعك الآن',
       watchDemo: 'شاهد أعمالي',
-      guarantee: 'تسليم سريع عالمي',
+      guarantee: 'دقة في الوقت وجودة في الإبداع',
       features: [
-        'تصميم احترافي متجاوب',
-        'تسليم سريع لأي مكان',
-        'دعم شخصي مخصص',
-        'معايير دولية'
+        'تصميم وتحرير احترافي',
+        'تسليم عالمي سريع',
+        'دعم إبداعي شخصي',
+        'جاهز لجميع المنصات'
       ],
       stats: {
         delivery: 'تسليم عالمي',
-        projects: 'مشروع مكتمل',
+        projects: 'مشاريع مكتملة',
         satisfaction: 'رضا العملاء',
-        speed: 'أداء عالي'
+        speed: 'تأثير إبداعي'
       },
       values: {
         clarity: 'وضوح',
@@ -34,22 +34,22 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
       }
     },
     en: {
-      headline: 'Modern Web Solutions for the World',
-      subheadline: 'Freelance web developer delivering beautiful, high-performance websites and apps for clients worldwide.',
+      headline: 'Creative Digital Editor for Modern Brands',
+      subheadline: 'I craft stunning visuals, engaging content, and seamless digital experiences for businesses and creators worldwide.',
       cta: 'Start Your Project',
       watchDemo: 'View My Work',
-      guarantee: 'Fast, global delivery',
+      guarantee: 'On-time, on-brand, every time',
       features: [
-        'Professional responsive design',
-        'Fast worldwide delivery',
-        'Dedicated personal support',
-        'International standards'
+        'Professional design & editing',
+        'Fast global delivery',
+        'Personalized creative support',
+        'Ready for all platforms'
       ],
       stats: {
         delivery: 'Global Delivery',
         projects: 'Projects Completed',
         satisfaction: 'Client Satisfaction',
-        speed: 'High Performance'
+        speed: 'Creative Impact'
       },
       values: {
         clarity: 'Clarity',
@@ -58,22 +58,22 @@ const Hero: React.FC<HeroProps> = ({ currentLang }) => {
       }
     },
     fr: {
-      headline: 'Solutions Web Modernes pour le Monde',
-      subheadline: 'Développeur web freelance livrant des sites et applications performants et élégants pour des clients partout dans le monde.',
+      headline: 'Éditeur numérique créatif pour marques modernes',
+      subheadline: 'Je crée des visuels époustouflants, du contenu engageant et des expériences digitales fluides pour les entreprises et créateurs du monde entier.',
       cta: 'Lancez Votre Projet',
       watchDemo: 'Voir Mon Travail',
-      guarantee: 'Livraison rapide, partout dans le monde',
+      guarantee: 'Ponctuel, créatif, toujours sur-mesure',
       features: [
-        'Design professionnel responsive',
+        'Design & édition professionnels',
         'Livraison rapide dans le monde entier',
-        'Support personnel dédié',
-        'Standards internationaux'
+        'Support créatif personnalisé',
+        'Prêt pour toutes les plateformes'
       ],
       stats: {
         delivery: 'Livraison mondiale',
         projects: 'Projets Terminés',
         satisfaction: 'Satisfaction Client',
-        speed: 'Haute Performance'
+        speed: 'Impact Créatif'
       },
       values: {
         clarity: 'Clarté',
