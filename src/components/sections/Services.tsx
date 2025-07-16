@@ -160,7 +160,109 @@ const Services: React.FC = () => {
           popular: false,
           offerType: 'Web Application Offer',
           categoryKey: 'web-app',
-        }
+        },
+        // Canva Design & Social Media Offers
+        {
+          icon: Palette,
+          title: 'Social Media Post Design (Canva)',
+          description: 'Custom, eye-catching social media posts for Instagram, Facebook, LinkedIn, and more. Designed in Canva for easy editing and reuse.',
+          features: ['10 custom posts', 'Branded with your logo/colors', 'Delivered as Canva templates (fully editable)', 'Fast turnaround (2-3 days)'],
+          price: 'From $49',
+          popular: true,
+          offerType: 'Canva Design & Social Media',
+          categoryKey: 'canva-design',
+        },
+        {
+          icon: Palette,
+          title: 'Short Video Editing (Canva)',
+          description: 'Engaging short videos for Reels, TikTok, or Stories, edited in Canva with your branding and message.',
+          features: ['Up to 60 seconds per video', 'Text overlays, transitions, music', 'Delivered as MP4 and Canva template', '2 revisions included'],
+          price: 'From $39/video',
+          popular: false,
+          offerType: 'Canva Design & Social Media',
+          categoryKey: 'canva-design',
+        },
+        {
+          icon: Palette,
+          title: 'Social Media Branding Kit (Canva)',
+          description: 'Complete branding kit for your social media presence, including profile picture, cover/banner, highlight icons, and post templates.',
+          features: ['Profile & cover images', '5 highlight icons', '3 post templates', 'All delivered as Canva files'],
+          price: 'From $59',
+          popular: false,
+          offerType: 'Canva Design & Social Media',
+          categoryKey: 'canva-design',
+        },
+        {
+          icon: Palette,
+          title: 'Website + Social Media Bundle',
+          description: 'Get a modern website and a full social media kit to launch your brand online.',
+          features: ['Website (see web offers)', '10 social media posts', 'Branding kit', 'Discounted bundle price'],
+          price: 'From $349',
+          popular: false,
+          offerType: 'Canva Design & Social Media',
+          categoryKey: 'canva-design',
+        },
+        // Canva Bundles Offers
+        {
+          icon: Palette,
+          title: 'Social Media Post Design',
+          description: 'Eye-catching, branded posts for Instagram, Facebook, LinkedIn, and more. Delivered in ready-to-publish formats, tailored to your brand and goals.',
+          features: [
+            'Custom templates for posts, stories, and ads',
+            'Brand colors, fonts, and logo integration',
+            'Editable Canva links for future use',
+            'Fast turnaround (1-2 days)'
+          ],
+          price: 'From $25/post',
+          popular: false,
+          offerType: 'Canva Bundles',
+          categoryKey: 'canva-bundles',
+        },
+        {
+          icon: Palette,
+          title: 'Video Editing for Social Media',
+          description: 'Short-form videos, reels, and stories edited in Canva for maximum engagement. Includes captions, transitions, and brand elements.',
+          features: [
+            'Up to 60 seconds per video',
+            'Animated text, stickers, and effects',
+            'Optimized for Instagram, TikTok, YouTube Shorts',
+            'Delivered as MP4 and Canva link'
+          ],
+          price: 'From $40/video',
+          popular: false,
+          offerType: 'Canva Bundles',
+          categoryKey: 'canva-bundles',
+        },
+        {
+          icon: Palette,
+          title: 'Branding Kit Creation',
+          description: 'Professional Canva branding kits with logos, color palettes, fonts, and templates to ensure a consistent look across all platforms.',
+          features: [
+            'Logo design (3 concepts)',
+            'Color palette & font selection',
+            'Social media templates (5 included)',
+            'Brand guidelines PDF'
+          ],
+          price: 'From $120/kit',
+          popular: false,
+          offerType: 'Canva Bundles',
+          categoryKey: 'canva-bundles',
+        },
+        {
+          icon: Palette,
+          title: 'Canva Bundles',
+          description: 'Save with bundled packages: posts, stories, videos, and branding assets for a cohesive online presence.',
+          features: [
+            '10 social media posts + 2 videos + branding kit',
+            'All editable in Canva',
+            'Personalized to your business',
+            'Priority delivery'
+          ],
+          price: 'From $250/bundle',
+          popular: false,
+          offerType: 'Canva Bundles',
+          categoryKey: 'canva-bundles',
+        },
       ]
   };
 
