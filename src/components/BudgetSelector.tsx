@@ -26,12 +26,12 @@ const BudgetSelector: React.FC<BudgetSelectorProps> = ({
   const translations = {
     ar: {
       title: 'اختر ميزانيتك',
-      subtitle: 'اختر نطاق ميزانيتك لرؤية الخدمات المتاحة',
+      subtitle: 'اختر نطاق ميزانيتك بالدولار لرؤية الخدمات المتاحة',
       budgetRanges: [
-        { min: 0, max: 50000, label: 'حتى 50,000 دج', color: 'bg-blue-100 border-blue-300' },
-        { min: 50000, max: 100000, label: '50,000 - 100,000 دج', color: 'bg-green-100 border-green-300' },
-        { min: 100000, max: 150000, label: '100,000 - 150,000 دج', color: 'bg-yellow-100 border-yellow-300' },
-        { min: 150000, max: 999999, label: 'أكثر من 150,000 دج', color: 'bg-purple-100 border-purple-300' }
+        { min: 0, max: 300, label: 'حتى $300', color: 'bg-blue-100 border-blue-300' },
+        { min: 300, max: 600, label: '$300 - $600', color: 'bg-green-100 border-green-300' },
+        { min: 600, max: 1200, label: '$600 - $1200', color: 'bg-yellow-100 border-yellow-300' },
+        { min: 1200, max: 999999, label: 'أكثر من $1200', color: 'bg-purple-100 border-purple-300' }
       ],
       availableServices: 'الخدمات المتاحة',
       noServicesAvailable: 'لا توجد خدمات متاحة في هذا النطاق',
@@ -42,12 +42,12 @@ const BudgetSelector: React.FC<BudgetSelectorProps> = ({
     },
     en: {
       title: 'Select Your Budget',
-      subtitle: 'Choose your budget range to see available services',
+      subtitle: 'Choose your budget range in USD to see available services',
       budgetRanges: [
-        { min: 0, max: 50000, label: 'Up to 50,000 DA', color: 'bg-blue-100 border-blue-300' },
-        { min: 50000, max: 100000, label: '50,000 - 100,000 DA', color: 'bg-green-100 border-green-300' },
-        { min: 100000, max: 150000, label: '100,000 - 150,000 DA', color: 'bg-yellow-100 border-yellow-300' },
-        { min: 150000, max: 999999, label: 'Over 150,000 DA', color: 'bg-purple-100 border-purple-300' }
+        { min: 0, max: 300, label: 'Up to $300', color: 'bg-blue-100 border-blue-300' },
+        { min: 300, max: 600, label: '$300 - $600', color: 'bg-green-100 border-green-300' },
+        { min: 600, max: 1200, label: '$600 - $1200', color: 'bg-yellow-100 border-yellow-300' },
+        { min: 1200, max: 999999, label: 'Over $1200', color: 'bg-purple-100 border-purple-300' }
       ],
       availableServices: 'Available Services',
       noServicesAvailable: 'No services available in this range',
@@ -58,12 +58,12 @@ const BudgetSelector: React.FC<BudgetSelectorProps> = ({
     },
     fr: {
       title: 'Sélectionnez Votre Budget',
-      subtitle: 'Choisissez votre fourchette de budget pour voir les services disponibles',
+      subtitle: 'Choisissez votre fourchette de budget en dollars pour voir les services disponibles',
       budgetRanges: [
-        { min: 0, max: 50000, label: 'Jusqu\'à 50 000 DA', color: 'bg-blue-100 border-blue-300' },
-        { min: 50000, max: 100000, label: '50 000 - 100 000 DA', color: 'bg-green-100 border-green-300' },
-        { min: 100000, max: 150000, label: '100 000 - 150 000 DA', color: 'bg-yellow-100 border-yellow-300' },
-        { min: 150000, max: 999999, label: 'Plus de 150 000 DA', color: 'bg-purple-100 border-purple-300' }
+        { min: 0, max: 300, label: 'Jusqu\'à $300', color: 'bg-blue-100 border-blue-300' },
+        { min: 300, max: 600, label: '$300 - $600', color: 'bg-green-100 border-green-300' },
+        { min: 600, max: 1200, label: '$600 - $1200', color: 'bg-yellow-100 border-yellow-300' },
+        { min: 1200, max: 999999, label: 'Plus de $1200', color: 'bg-purple-100 border-purple-300' }
       ],
       availableServices: 'Services Disponibles',
       noServicesAvailable: 'Aucun service disponible dans cette fourchette',
