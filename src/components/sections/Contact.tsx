@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, Zap, Rocket, Facebook, Instagram, Youtube } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import PaymentMethods from '../PaymentMethods';
 
 interface ContactProps {
   currentLang: string;
@@ -388,6 +389,8 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
             auresweb05@gmail.com
           </a>
         </div>
+
+        <PaymentMethods />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Form */}
