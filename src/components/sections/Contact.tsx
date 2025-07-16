@@ -16,6 +16,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
     timeline: '',
     message: ''
   });
+  const [showSuccessMessage, setShowSuccessMessage] = React.useState(false);
 
   const translations = {
     ar: {
@@ -274,7 +275,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
       'VcAkmne0gx6bdgCHZ'
     ).then(
       (result) => {
-        alert('Your request has been sent!');
+        setShowSuccessMessage(true);
         setFormData({ name: '', email: '', phone: '', service: '', budget: '', timeline: '', message: '' });
       },
       (error) => {
@@ -292,6 +293,49 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
 
   return (
     <section id="contact" className="py-24 bg-gray-900/60 relative overflow-hidden">
+      {/* Success Message Modal */}
+      {showSuccessMessage && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-gray-800/90 backdrop-blur-xl rounded-3xl p-8 max-w-md w-full shadow-2xl border border-gray-700/50">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/30">
+                <CheckCircle className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {currentLang === 'ar' ? 'تم إرسال طلبك بنجاح!' : currentLang === 'fr' ? 'Votre demande a été envoyée avec succès!' : 'Request Sent Successfully!'}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentLang === 'ar' ? 'شكراً لك! سأتواصل معك قريباً.' : currentLang === 'fr' ? 'Merci! Je vous contacterai bientôt.' : 'Thank you! I will contact you soon.'}
+              </p>
+              
+              {/* Follow Us Section */}
+              <div className="bg-gray-700/50 rounded-2xl p-4 mb-6">
+                <p className="text-sm text-gray-300 mb-3">
+                  {currentLang === 'ar' ? 'تابعنا على وسائل التواصل الاجتماعي:' : currentLang === 'fr' ? 'Suivez-nous sur les réseaux sociaux:' : 'Follow us on social media:'}
+                </p>
+                <div className="flex justify-center space-x-3">
+                  <a href="https://facebook.com/auresweb05" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center hover:bg-blue-600/30 transition-colors border border-blue-600/30">
+                    <Facebook className="w-5 h-5 text-blue-400" />
+                  </a>
+                  <a href="https://instagram.com/auresweb05" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-pink-500/20 rounded-full flex items-center justify-center hover:bg-pink-500/30 transition-colors border border-pink-500/30">
+                    <Instagram className="w-5 h-5 text-pink-400" />
+                  </a>
+                  <a href="https://youtube.com/@auresweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-600/20 rounded-full flex items-center justify-center hover:bg-red-600/30 transition-colors border border-red-600/30">
+                    <Youtube className="w-5 h-5 text-red-400" />
+                  </a>
+                </div>
+              </div>
+              
+              <button
+                onClick={() => setShowSuccessMessage(false)}
+                className="w-full bg-gradient-to-r from-teal-600 to-blue-600 text-white py-3 px-6 rounded-2xl font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all duration-300"
+              >
+                {currentLang === 'ar' ? 'حسناً' : currentLang === 'fr' ? 'D\'accord' : 'OK'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-teal-400 rounded-full animate-pulse shadow-lg shadow-teal-500/30" />
