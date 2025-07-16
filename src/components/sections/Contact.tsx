@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, CheckCircle, Zap, Rocket, Facebook, Instagram, Youtube } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 interface ContactProps {
   currentLang: string;
@@ -268,10 +268,22 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Initialize EmailJS with your public key
+    emailjs.init('VcAkmne0gx6bdgCHZ');
+    
     emailjs.send(
       'service_0jxgqal',
       'template_spe1spa',
-      formData,
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        budget: formData.budget,
+        timeline: formData.timeline,
+        message: formData.message
+      },
       'VcAkmne0gx6bdgCHZ'
     ).then(
       (result) => {
@@ -279,6 +291,7 @@ const Contact: React.FC<ContactProps> = ({ currentLang }) => {
         setFormData({ name: '', email: '', phone: '', service: '', budget: '', timeline: '', message: '' });
       },
       (error) => {
+        console.error('EmailJS error:', error);
         alert('There was an error sending your request. Please try again.');
       }
     );
