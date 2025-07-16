@@ -269,10 +269,12 @@ const Services: React.FC = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [modalOffers, setModalOffers] = React.useState<ServiceOffer[]>([]);
   const [modalCategory, setModalCategory] = React.useState<string>('');
+  const [modalIndex, setModalIndex] = React.useState<number>(0);
 
   React.useEffect(() => {
     if (modalOpen) {
       document.body.classList.add('modal-open');
+      setModalIndex(0); // Reset to first offer when modal opens
     } else {
       document.body.classList.remove('modal-open');
     }
@@ -489,9 +491,9 @@ const Services: React.FC = () => {
           <div className="modal fixed inset-0 z-50 flex items-center justify-center">
             {/* Background */}
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
-            <div className="relative z-10 bg-gray-900 rounded-3xl max-w-3xl w-full shadow-2xl border-2 border-teal-500/30 animate-scale-in p-4 md:p-8 max-h-[90vh]">
+            <div className="relative z-10 bg-gray-900 rounded-3xl max-w-3xl w-full shadow-2xl border-2 border-teal-500/30 animate-scale-in p-4 md:p-8 max-h-[90vh] flex flex-col items-center">
               {/* Close Button */}
-              <div className="sticky top-0 z-20 flex justify-end bg-gray-900 rounded-t-3xl pt-2 pb-2">
+              <div className="sticky top-0 z-20 flex justify-end bg-gray-900 rounded-t-3xl pt-2 pb-2 w-full">
                 <button
                   onClick={closeModal}
                   className="bg-gray-800 hover:bg-red-500/80 transition-colors duration-200 rounded-full p-2 shadow-lg border-2 border-gray-700/50 group"
@@ -503,13 +505,23 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-6 text-center">
                 {t.services.find(s => s.categoryKey === modalCategory)?.offerType || modalCategory}
               </h3>
-              <div className="flex flex-row gap-6 overflow-x-auto pb-2">
-                {modalOffers.map((offer, idx) => {
+              <div className="flex items-center justify-center w-full gap-4">
+                {/* Left Arrow */}
+                <button
+                  onClick={() => setModalIndex((prev) => Math.max(prev - 1, 0))}
+                  disabled={modalIndex === 0}
+                  className={`p-2 rounded-full bg-gray-800 hover:bg-teal-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed`}
+                  aria-label="Previous Offer"
+                >
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                {/* Offer Card */}
+                {modalOffers.length > 0 && (() => {
+                  const offer = modalOffers[modalIndex];
                   const Icon = offer.icon;
                   return (
                     <div
-                      key={idx}
-                      className={`min-w-[260px] max-w-xs bg-gray-800/70 rounded-2xl p-6 border flex-shrink-0 ${
+                      className={`min-w-[260px] max-w-xs bg-gray-800/70 rounded-2xl p-6 border flex-shrink-0 relative ${
                         offer.popular
                           ? 'border-teal-400 ring-2 ring-teal-400/30 animate-pulse'
                           : 'border-gray-700/50'
@@ -539,7 +551,22 @@ const Services: React.FC = () => {
                       </a>
                     </div>
                   );
-                })}
+                })()}
+                {/* Right Arrow */}
+                <button
+                  onClick={() => setModalIndex((prev) => Math.min(prev + 1, modalOffers.length - 1))}
+                  disabled={modalIndex === modalOffers.length - 1}
+                  className={`p-2 rounded-full bg-gray-800 hover:bg-teal-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed`}
+                  aria-label="Next Offer"
+                >
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+              {/* Offer count indicator */}
+              <div className="mt-4 text-gray-400 text-sm text-center">
+                {modalOffers.length > 1 && (
+                  <span>Offer {modalIndex + 1} of {modalOffers.length}</span>
+                )}
               </div>
             </div>
           </div>
