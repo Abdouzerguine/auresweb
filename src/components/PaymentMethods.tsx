@@ -2,17 +2,6 @@ import React from 'react';
 
 const paymentMethods = [
   {
-    name: 'Support Card',
-    svg: (
-      <svg width="60" height="38" viewBox="0 0 60 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="60" height="38" rx="8" fill="#e0f7fa"/>
-        <text x="30" y="18" textAnchor="middle" fontFamily="Arial Black,Arial,sans-serif" fontWeight="bold" fontSize="12" fill="#00796b">SUPPORT CARD</text>
-        <text x="30" y="30" textAnchor="middle" fontFamily="monospace" fontWeight="bold" fontSize="10" fill="#333">1234 5678 9012 3456</text>
-        <text x="30" y="36" textAnchor="middle" fontFamily="Arial" fontSize="8" fill="#00796b">YOUR NAME</text>
-      </svg>
-    )
-  },
-  {
     name: 'Visa',
     svg: (
       <svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
